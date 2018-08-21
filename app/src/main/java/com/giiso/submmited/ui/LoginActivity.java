@@ -1,5 +1,6 @@
 package com.giiso.submmited.ui;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
@@ -130,17 +131,19 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     public void loginFailure() {
         ToastUtil.showToast("登录失败，请重试");
     }
-
+    ProgressDialog progressDialog;
     @Override
     public void showLoading() {
         super.showLoading();
         DialogUtil.showProgressDialog(this);
+        progressDialog = ProgressDialog.show(this, "", "正在登陆中...", false, true);
     }
 
     @Override
     public void closeLoading() {
+
         super.closeLoading();
-        DialogUtil.dismissDialog();
+        progressDialog.dismiss();
     }
 
     @Override
