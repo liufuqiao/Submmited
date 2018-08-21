@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/date"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/ed_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space10"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_border"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/start_time"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/items"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_task_affiliation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_marginTop="@dimen/space4"
+                    android:background="@drawable/edit_border"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/items"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/space8"
+                    android:text="@string/task"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_marginTop="@dimen/space4"
+                    android:background="@drawable/edit_border"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/color_999999"
+                    android:gravity="left|top"
+                    android:hint="请输入任务明细"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:minLines="3"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/task_type"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_task_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_marginTop="@dimen/space4"
+                    android:background="@drawable/edit_border"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/color_999999"
+                    android:text=""
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/space8"
+                    android:text="@string/task_status"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <Spinner
+                    android:id="@+id/spinner_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/space8"
+                    android:text="@string/task_man_hours"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_marginTop="@dimen/space4"
+                    android:background="@drawable/edit_border"
+                    android:layout_marginLeft="@dimen/space10"
+                    android:hint="请输入工时(小时)"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/space8"
+                    android:text="@string/task_complete_progress"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_complete_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_marginTop="@dimen/space4"
+                    android:background="@drawable/edit_border"
+                    android:layout_marginLeft="@dimen/space10"
+                    android:hint="请输入完成进度(%)"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space4"
+                android:layout_marginLeft="@dimen/space10"
+                android:layout_marginRight="@dimen/space10"
+                android:layout_marginTop="@dimen/space4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/space8"
+                    android:text="@string/remark"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_marginTop="@dimen/space4"
+                    android:background="@drawable/edit_border"
+                    android:gravity="left|top"
+                    android:hint="请输入备注"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:minLines="3"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space40"
+                android:layout_margin="@dimen/space8">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/space4"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_dialog_btn_cannel"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/font_16" />
+
+                <TextView
+                    android:id="@+id/tv_ensure"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space4"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_dialog_btn_ensure"
+                    android:gravity="center"
+                    android:text="@string/ensure"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

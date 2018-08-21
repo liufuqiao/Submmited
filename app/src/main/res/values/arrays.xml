@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <array name="g_default_loading_fg">
+        <item>#00bcd4</item>
+        <item>#9c27b0</item>
+        <item>#5677fc</item>
+        <item>#ff9800</item>
+        <item>#e91e63</item>
+    </array>
+
+    <integer-array name="info_channel_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </integer-array>
+    <integer-array name="info_channel_isfix">
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <string-array name="info_channel_type">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="info_channel_channelName">
+        <item>推荐</item>
+        <item>在路上</item>
+        <item>体育</item>
+        <item>玩车</item>
+        <item>娱乐</item>
+        <item>理财</item>
+        <item>找房</item>
+        <item>讲习</item>
+    </string-array>
+
+    <integer-array name="video_channel_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </integer-array>
+    <integer-array name="video_channel_isfix">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <string-array name="video_channel_type">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="video_channel_channelName">
+        <item>推荐</item>
+        <item>逗趣</item>
+        <item>酷跑</item>
+        <item>追新</item>
+        <item>男、女朋友</item>
+        <item>萌宠</item>
+        <item>二次元</item>
+        <item>亲子</item>
+    </string-array>
+</resources>

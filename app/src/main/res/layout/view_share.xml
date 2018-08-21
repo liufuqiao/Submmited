@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_30"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_friends_cir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_marginRight="@dimen/padding_15"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableTop="@drawable/share_friends"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="@string/friends_cir"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/textfont11" />
+
+        <TextView
+            android:id="@+id/tv_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_marginRight="@dimen/padding_15"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableTop="@drawable/share_wechat"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="@string/wechat"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/textfont11" />
+
+        <TextView
+            android:id="@+id/tv_webo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_marginRight="@dimen/padding_15"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableTop="@drawable/share_webo"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="@string/webo"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/textfont11" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_marginRight="@dimen/padding_15"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableTop="@drawable/share_qq"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="@string/qq"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/textfont11" />
+
+        <TextView
+            android:id="@+id/tv_qq_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_marginRight="@dimen/padding_15"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableTop="@drawable/share_qzone"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="@string/qq_zone"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/textfont11" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/divider"
+        android:layout_marginTop="@dimen/padding_20"
+        android:background="@color/divider" />
+
+    <TextView
+        android:id="@+id/tv_cannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/selector_share_cannel"
+        android:padding="@dimen/padding_15"
+        android:text="@string/cancel"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/textfont15" />
+</LinearLayout>

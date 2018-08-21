@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Giiso报工系统</string>
+
+    <string name="page_ads_onclick">点击跳过</string>
+
+
+    <string name="submmited">报工</string>
+    <string name="item">项目</string>
+    <string name="member">成员</string>
+    <string name="my">我的</string>
+    <!--升级-->
+    <string name="update">检查更新</string>
+    <string name="version_update">版本更新</string>
+    <string name="upgrade_now">立即升级</string>
+    <string name="install_now">立即安装</string>
+    <string name="go_open">去开启</string>
+    <string name="plsae_go_open">现在去开启</string>
+    <string name="reminder">温馨提示</string>
+    <string name="info_notification">资讯推送</string>
+    <string name="tip_double_click_exit">再次点击退出Giiso报工系统</string>
+    <string name="info_notification_trim">允许接收资讯推送提醒，不再错过精彩内容！</string>
+    <string name="update_application_in_the_background">正在后台更新应用…</string>
+    <string name="you_need_to_open_the_secret_message">需要开启对您手机的存储权限，是否现在开启</string>
+    <string name="you_need_to_open_the_secret_no_message">安装应用需要打开未知来源权限，请去设置中开启权限</string>
+    <string name="you_need_to_open_location_the_secret_message">需要开启对您手机的权限才能定位，是否现在开启</string>
+    <string name="community_location_trim">请到设置中开启定位服务，全\n橙智媒需要知道您的位置才能\n获取附近的社群信息...</string>
+    <string name="app_file_no_existent">安装包文件不存在，请重新下载</string>
+    <string name="app_file_damage">安装包文件以损坏，请重新下载</string>
+    <string name="loading">正在下载...</string>
+    <string name="download_failure">下载失败</string>
+
+    <string name="rationale_read">应用程序需要访问你的SD卡以及手机信息.</string>
+    <string name="rationale_read_camare">应用程序需要访问你的SD卡以及相机.</string>
+
+    <string name="operate_error_hint_network">网络不太给力，请检查后重试</string>
+    <string name="operate_error_hint_server">前方信号失联，请稍后重试～</string>
+
+    <!--网络-->
+    <string name="server_error">哎哟，刚好碰上星球旅游高峰期\r\n飞船不够用啦，请稍后再试</string>
+    <string name="click_to_refresh">请查看网络连接后点击重试</string>
+    <string name="click_to_network">重新连接网络</string>
+    <string name="network_error_hint1">网络不太给力</string>
+    <string name="no_track_news_hint1"> 暂无内容</string>
+    <string name="tip_network_error">没有可用的网络</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_loading_fail">加载失败</string>
+    <string name="click_to_retry">点击重试</string>
+    <string name="no_network_pro"> 无法连接网络，请检查网络设置</string>
+
+    <string name="server_timeout">连接超时，请稍候重试！</string>
+    <string name="server_down">请求数据失败，请稍候重试！</string>
+    <string name="server_failed">服务器无响应，请稍候重试！</string>
+    <string name="server_excepatino">服务器出现异常，请稍候重试！</string>
+    <string name="no_network">网络连接失败，请检查您的网络！</string>
+    <string name="no_network_new">网络无法连接,请重新加载吧</string>
+    <string name="no_connection">检测不到网络，请检查手机网络设置！</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="cancel">取消</string>
+    <string name="ensure">确定</string>
+
+    <string name="retry">重试</string>
+    <string name="retry_load">重试加载</string>
+
+    <string name="wechat">微信</string>
+    <string name="qq">QQ</string>
+    <string name="QQ">腾讯QQ</string>
+    <string name="webo">微博</string>
+    <!--分享-->
+    <string name="friends_cir">朋友圈</string>
+    <string name="qq_zone">QQ空间</string>
+    <string name="share_complete">分享成功</string>
+    <string name="share_fail">分享失败</string>
+    <string name="share_cannel">分享取消</string>
+    <string name="share">分享</string>\
+
+    <string name="action_sign_in">登录</string>
+    <string name="prompt_username">用户</string>
+    <string name="prompt_password">密码</string>
+    <string name="login_out">退出登录</string>
+
+    <!--基本-->
+    <string name="add_keyword_load">加载中...</string>
+    <string name="state_network_error">网络错误</string>
+    <string name="state_loading">正在加载…</string>
+    <string name="state_not_more">没有更多数据</string>
+    <string name="state_load_error">加载失败</string>
+    <string name="state_refreshing">正在刷新</string>
+    <string name="state_loading_error">数据加载中&#8230;</string>
+    <string name="state_submit">正在提交中&#8230;</string>
+
+    <!--刷新加载更多-->
+    <string name="release_to_loadmore">松开加载</string>
+    <string name="swipe_to_loadmore">上拉加载</string>
+    <string name="now_loadmore">正在加载</string>
+    <string name="now_refreshing">正在加载</string>
+    <string name="release_to_refresh">松开刷新</string>
+    <string name="swipe_to_refresh">下拉刷新</string>
+    <string name="refresh_complete">刷新完成</string>
+    <string name="load_data_done">数据已经加载完了</string>
+    <string name="no_more">没有更多了</string>
+    <string name="no_data">暂无数据</string>
+    <string name="load_fial">获取失败，点击重新加载</string>
+
+    <string name="date">&#8194;&#8194;&#8194;&#8194;日期&#8194;</string>
+    <string name="items">项目归属&#8194;</string>
+    <string name="task_desc">任务描述&#8194;</string>
+    <string name="task">&#8194;&#8194;&#8194;&#8194;任务&#8194;</string>
+    <string name="remark">&#8194;&#8194;&#8194;&#8194;备注&#8194;</string>
+    <string name="task_status">任务状态&#8194;</string>
+    <string name="task_progress">任务进度&#8194;</string>
+    <string name="task_predict_hour">预计工时&#8194;</string>
+    <string name="task_man_hours">工时小时&#8194;</string>
+    <string name="task_type">任务类型&#8194;</string>
+    <string name="task_complete_progress">完成进度&#8194;</string>
+    <string name="create_time">创建时间&#8194;</string>
+    <string name="start_time">开始日期&#8194;</string>
+    <string name="task_time">结束日期&#8194;</string>
+    <string name="designate">&#8194;&#8194;&#8194;&#8194;指派&#8194;</string>
+    <string name="task_person">责&#8194;任&#8194;人&#8194;</string>
+    <string name="task_create">创&#8194;建&#8194;人&#8194;</string>
+    <string name="preidct_develop_time">预计开发截止周期</string>
+</resources>

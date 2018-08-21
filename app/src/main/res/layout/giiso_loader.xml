@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.giiso.submmited.ui.LoaderActivity"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space42">
+        <ImageButton
+            android:id="@+id/ib_close"
+            android:layout_width="@dimen/space46"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:src="@mipmap/close"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text=""/>
+        <ImageButton
+            android:id="@+id/ib_search"
+            android:layout_width="@dimen/space46"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/search"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,85 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_height">45dp</dimen>
+
+    <dimen name="g_loading_maxSize">40dp</dimen>
+    <dimen name="g_loading_minSize">28dp</dimen>
+
+    <!--分隔线宽度-->
+    <dimen name="divider">0.5dp</dimen>
+    <dimen name="divider_1">1dp</dimen>
+    <dimen name="divider_2">2dp</dimen>
+    <dimen name="divider_3">3dp</dimen>
+    <dimen name="divider_4">4dp</dimen>
+    <!--内边距-->
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_23">23dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_28">28dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_35">35dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding_45">45dp</dimen>
+    <dimen name="padding_60">60dp</dimen>
+    <dimen name="padding_80">80dp</dimen>
+    <!--距离值-->
+    <dimen name="space1">1dp</dimen>
+    <dimen name="space2">2dp</dimen>
+    <dimen name="space3">3dp</dimen>
+    <dimen name="space4">4dp</dimen>
+    <dimen name="space5">5dp</dimen>
+    <dimen name="space6">6dp</dimen>
+    <dimen name="space8">8dp</dimen>
+    <dimen name="space10">10dp</dimen>
+    <dimen name="space12">12dp</dimen>
+    <dimen name="space14">14dp</dimen>
+    <dimen name="space15">15dp</dimen>
+    <dimen name="space16">16dp</dimen>
+    <dimen name="space18">18dp</dimen>
+    <dimen name="space20">20dp</dimen>
+    <dimen name="space22">22dp</dimen>
+    <dimen name="space24">24dp</dimen>
+    <dimen name="space25">25dp</dimen>
+    <dimen name="space28">28dp</dimen>
+    <dimen name="space29">29dp</dimen>
+    <dimen name="space30">30dp</dimen>
+    <dimen name="space32">32dp</dimen>
+    <dimen name="space35">35dp</dimen>
+    <dimen name="space40">40dp</dimen>
+    <dimen name="space42">42dp</dimen>
+    <dimen name="space44">44dp</dimen>
+    <dimen name="space46">46dp</dimen>
+    <dimen name="space50">50dp</dimen>
+
+    <!--字体大小-->
+    <dimen name="textfont9">9sp</dimen>
+    <dimen name="textfont10">10sp</dimen>
+    <dimen name="textfont11">11sp</dimen>
+    <dimen name="textfont12">12sp</dimen>
+    <dimen name="textfont13">13sp</dimen>
+    <dimen name="textfont14">14sp</dimen>
+    <dimen name="textfont15">15sp</dimen>
+    <dimen name="textfont16">16sp</dimen>
+    <dimen name="textfont17">17sp</dimen>
+    <dimen name="textfont18">18sp</dimen>
+    <dimen name="textfont19">19sp</dimen>
+    <dimen name="textfont20">20sp</dimen>
+    <dimen name="textfont21">21sp</dimen>
+    <dimen name="textfont22">22sp</dimen>
+    <dimen name="textfont23">23sp</dimen>
+    <dimen name="textfont26">26sp</dimen>
+    <dimen name="textfont30">30sp</dimen>
+    <dimen name="textfont50">50sp</dimen>
+    <dimen name="textfont24">24sp</dimen>
+
+</resources>

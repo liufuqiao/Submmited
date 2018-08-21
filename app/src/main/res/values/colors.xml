@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1296db</color>
+    <color name="colorPrimaryDark">#1296db</color>
+    <color name="colorAccent">#1296db</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="colorBackground">#f7f7f7</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!--夜间模式蒙层-->
+    <color name="layer_gradual">#00000000</color>
+    <!--蒙层-->
+    <color name="layer_gradual_white">#00ffffff</color>
+    <color name="layer_gradual_black">#88000000</color>
+
+    <!--背景颜色值-->
+    <color name="list_click_select_color">#f0f0f0</color>
+    <color name="list_click_color">#ffffff</color>
+
+    <!--字体颜色值-->
+    <color name="text_theme">#1296db</color>
+    <color name="color_991296db">#991296db</color>
+    <color name="color_99FF6600">#99FF6600</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_99999999">#99999999</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_FF4022">#FF4022</color>
+    <color name="color_e3e3e3">#e3e3e3</color>
+    <color name="color_C7C4C4">#C7C4C4</color>
+    <color name="color_FB5830">#FB5830</color>
+    <color name="color_ffffff">#FFFFFF</color>
+    <color name="color_9b9b9b">#9b9b9b</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <!--分割线色值-->
+    <color name="divider">#bdbdbd</color>
+    <color name="divider_dotted">#cccccc</color>
+    <color name="divider1">#E5E5E5</color>
+    <color name="divider2">#f7f7f7</color>
+    <color name="divider4">#999999</color>
+    <color name="divider_title">#bababa</color>
+
+    <color name="color_4C4C4C">#4C4C4C</color>
+    <color name="color_99D4DCE1">#99D4DCE1</color>
+    <color name="color_D4DCE1">#D4DCE1</color>
+</resources>

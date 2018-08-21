@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProportionImageView">
+        <!-- 允许显示最大行数 -->
+        <attr name="proportionNum" format="integer"></attr>
+        <!-- 动画执行时间 -->
+        <attr name="proportion" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="XTabLayout">
+        <attr name="xTabIndicatorHeight" format="dimension" />
+        <attr name="xTabIndicatorWidth" format="dimension" />
+        <attr name="xTabIndicatorColor" format="color" />
+        <attr name="xTabPadding" format="dimension" />
+        <attr name="xTabPaddingStart" format="dimension" />
+        <attr name="xTabPaddingTop" format="dimension" />
+        <attr name="xTabPaddingEnd" format="dimension" />
+        <attr name="xTabPaddingBottom" format="dimension" />
+        <attr name="xTabTextAppearance" format="reference" />
+        <attr name="xTabTextColor" format="color" />
+        <attr name="xTabSelectedTextColor" format="color" />
+        <attr name="xTabMinWidth" format="dimension" />
+        <attr name="xTabMaxWidth" format="dimension" />
+        <attr name="xTabBackgroundColor" format="reference|color" />
+        <attr name="xTabSelectedBackgroundColor" format="reference|color" />
+        <attr name="xTabContentStart" format="dimension" />
+        <attr name="xTabMode">
+            <enum name="scrollable" value="0x00000000" />
+            <enum name="fixed" value="0x00000001" />
+        </attr>
+        <attr name="xTabGravity" format="integer" />
+
+        <attr name="xTabTextSize" format="dimension" />
+        <attr name="xTabTextBold" format="boolean" />
+        <attr name="xTabSelectedTextSize" format="dimension" />
+        <attr name="xTabTextSelectedBold" format="boolean" />
+        <attr name="xTabDisplayNum" format="integer" />
+        <attr name="xTabTextAllCaps" format="boolean" />
+
+
+        <attr name="xTabDividerHeight" format="dimension" />
+        <attr name="xTabDividerWidth" format="dimension" />
+        <attr name="xTabDividerWidthWidthText" format="boolean" />
+        <attr name="xTabDividerColor" format="color" />
+        <attr name="xTabDividerGravity">
+            <enum name="top" value="0x00000000" />
+            <enum name="center" value="0x00000001" />
+            <enum name="bottom" value="0x00000002" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextViewAttr">
+        <!-- 允许显示最大行数 -->
+        <attr name="maxExpandLines" format="integer"></attr>
+        <!-- 动画执行时间 -->
+        <attr name="duration" format="integer"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeToLoadLayout">
+        <attr name="refresh_enabled" format="boolean" />
+        <attr name="load_more_enabled" format="boolean" />
+
+        <attr name="swipe_style" format="enum">
+            <enum name="classic" value="0" />
+            <enum name="above" value="1" />
+            <enum name="blew" value="2" />
+            <enum name="scale" value="3" />
+        </attr>
+        <attr name="refresh_trigger_offset" format="dimension" />
+        <attr name="load_more_trigger_offset" format="dimension" />
+        <attr name="refresh_final_drag_offset" format="dimension" />
+        <attr name="load_more_final_drag_offset" format="dimension" />
+
+
+        <attr name="release_to_refreshing_scrolling_duration" format="integer" />
+        <attr name="refresh_complete_delay_duration" format="integer" />
+        <attr name="refresh_complete_to_default_scrolling_duration" format="integer" />
+        <attr name="default_to_refreshing_scrolling_duration" format="integer" />
+        <attr name="release_to_loading_more_scrolling_duration" format="integer" />
+        <attr name="load_more_complete_delay_duration" format="integer" />
+        <attr name="load_more_complete_to_default_scrolling_duration" format="integer" />
+        <attr name="default_to_loading_more_scrolling_duration" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CircularImage">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TitleBar">
+        <attr name="aTitle" format="string" />
+        <attr name="aIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Loading">
+        <attr name="gBackgroundLineSize" format="dimension" />
+        <attr name="gForegroundLineSize" format="dimension" />
+        <attr name="gBackgroundColor" format="reference|color" />
+        <attr name="gForegroundColor" format="reference|color" />
+        <attr name="gAutoRun" format="boolean" />
+        <attr name="gProgressFloat" format="float" />
+    </declare-styleable>
+
+    <!--换肤颜色-->
+
+    <declare-styleable name="RoundImageView">
+        <attr name="radius" format="reference|dimension" />
+        <attr name="type" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TagCloudView">
+        <attr name="autoScrollMode">
+            <enum name="disable" value="0" />
+            <enum name="decelerate" value="1" />
+            <enum name="uniform" value="2" />
+
+        </attr>
+        <attr name="radiusX" format="float" />
+        <attr name="radiusY" format="float" />
+        <attr name="touch_factor" format="float" />
+        <attr name="track_factor" format="float" />
+        <attr name="radiusPercent" format="float" />
+        <attr name="scrollSpeed" format="float" />
+        <attr name="lightColor" format="color" />
+        <attr name="darkColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="cloudTextView">
+        <attr name="android:color" />
+        <attr name="textColor" format="color" />
+        <attr name="textContent" format="string" />
+        <attr name="textSize" format="integer" />
+    </declare-styleable>
+    <attr name="auto_textColor" format="color" />
+    <attr name="auto_textContent" format="string" />
+    <attr name="auto_textSize" format="integer" />
+    <declare-styleable name="autoTextView">
+        <attr name="auto_textColor" />
+        <attr name="auto_textContent" />
+        <attr name="auto_textSize" />
+    </declare-styleable>
+</resources>

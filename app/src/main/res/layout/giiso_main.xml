@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_line">
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider4"
+        android:layout_above="@+id/ll_bottom"/>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_first_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_first_mine"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_first_selector" />
+
+            <TextView
+                android:id="@+id/tv_first_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_first_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/size_12"
+                android:text="@string/submmited"
+                android:textColor="@drawable/text_selector_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_second_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_second_mine"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_second_selector" />
+
+            <TextView
+                android:id="@+id/tv_second_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_second_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/size_12"
+                android:text="@string/item"
+                android:textColor="@drawable/text_selector_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_third_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_third_mine"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_third_selector" />
+
+            <TextView
+                android:id="@+id/tv_third_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_third_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/size_12"
+                android:text="@string/member"
+                android:textColor="@drawable/text_selector_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_four_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_four_mine"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_four_selector" />
+
+            <TextView
+                android:id="@+id/tv_four_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_four_mine"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/my"
+                android:textColor="@drawable/text_selector_color"
+                android:textSize="@dimen/size_12" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

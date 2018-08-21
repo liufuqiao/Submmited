@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="night_colorPrimary">#1d1d1e</color>
+    <color name="night_colorPrimaryDark">#8e410e</color>
+    <color name="night_colorPrimaryDarkNone">#00000000</color>
+</resources>

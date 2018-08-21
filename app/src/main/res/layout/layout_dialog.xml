@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lin_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space10"
+            android:paddingTop="@dimen/space20"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/space10"
+                android:paddingLeft="@dimen/space10"
+                android:paddingRight="@dimen/space10"
+                android:paddingTop="@dimen/space10"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/textfont16" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/space10"
+                android:paddingLeft="@dimen/space10"
+                android:paddingRight="@dimen/space10"
+                android:paddingTop="@dimen/space10"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/textfont11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space20"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_20"
+            android:paddingRight="@dimen/padding_20">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/btn_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_dialog_btn_ensure"
+                    android:gravity="center"
+                    android:minEms="6"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:paddingLeft="@dimen/padding_15"
+                    android:paddingRight="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:text="@string/ensure"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/textfont15" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/v_divider"
+                android:layout_width="@dimen/padding_20"
+                android:layout_height="0dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/btn_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_dialog_btn_cannel"
+                    android:gravity="center"
+                    android:minEms="6"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:paddingLeft="@dimen/padding_15"
+                    android:paddingRight="@dimen/padding_15"
+                    android:paddingTop="@dimen/padding_10"
+                    android:text="@string/cancel"
+                    android:textColor="@drawable/selector_dialog_text_cannel"
+                    android:textSize="@dimen/textfont15" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
+

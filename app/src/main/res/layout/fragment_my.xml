@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.giiso.submmited.ui.fragment.MyFragment">
+
+    <TextView
+        android:id="@+id/tv_login_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_18"
+        android:text="@string/login_out"/>
+
+</RelativeLayout>

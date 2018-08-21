@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.giiso.submmited.ui.widget.swipetoloadlayout.ClassicLoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:id="@+id/rlRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <!--<ProgressBar-->
+        <!--android:id="@+id/progressbar"-->
+        <!--style="?android:attr/progressBarStyleSmallInverse"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_toLeftOf="@+id/tvLoadMore" />-->
+
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tvLoadMore"/>
+        <!--android:background="@drawable/qq_refresh_success" />-->
+
+        <TextView
+            android:id="@+id/tvLoadMore"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/textfont10"
+            android:text="LoadMore"
+            android:textColor="@color/color_999999" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvRefreshNoMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/no_more"
+        android:textSize="@dimen/textfont10"
+        android:textColor="@color/color_999999"
+        android:visibility="invisible" />
+</com.giiso.submmited.ui.widget.swipetoloadlayout.ClassicLoadMoreFooterView>
