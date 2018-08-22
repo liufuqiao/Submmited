@@ -13,23 +13,17 @@ public abstract class FileObserver extends BaseObserver<String> {
     }
 
     @Override
-    protected void onStart() {
+    public void onCompleted() {
+        super.onCompleted();
         if (view != null) {
-            //view.showLoadingFileDialog();
-        }
-    }
-
-    @Override
-    public void onComplete() {
-        if (view != null) {
-            //view.hideLoadingFileDialog();
+            view.hideLoadingFileDialog();
         }
     }
 
     @Override
     public void onNext(String path) {
         File file = new File(path);
-        if (file != null && file.exists()) {
+        if (file.exists()) {
             onSuccess(file);
         } else {
             onError("file is null or a file does not exist");
@@ -40,7 +34,6 @@ public abstract class FileObserver extends BaseObserver<String> {
     public void onSuccess(String o) {
 
     }
-
 
     public abstract void onSuccess(File file);
 

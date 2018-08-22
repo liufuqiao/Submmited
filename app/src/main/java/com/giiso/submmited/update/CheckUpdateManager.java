@@ -17,8 +17,9 @@ import com.giiso.submmited.utils.DialogHelper;
 import com.giiso.submmited.utils.SingleDialogUtil;
 import com.giiso.submmited.utils.TDevice;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
 
 /**
  * Created by xwt

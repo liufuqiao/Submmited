@@ -7,7 +7,6 @@ import android.view.View;
 import com.giiso.submmited.R;
 import com.giiso.submmited.base.Constants;
 import com.giiso.submmited.bean.base.PageBean;
-import com.giiso.submmited.bean.base.ResultBean;
 import com.giiso.submmited.cache.CacheManager;
 import com.giiso.submmited.http.ResultResponse;
 import com.giiso.submmited.http.presenter.BaseObserver;
@@ -20,13 +19,7 @@ import com.giiso.submmited.ui.widget.swipetoloadlayout.SwipeToLoadLayout;
 import com.giiso.submmited.utils.Log;
 import com.giiso.submmited.utils.NetworkUtils;
 import com.giiso.submmited.utils.TDevice;
-import com.giiso.submmited.utils.ToastUtil;
 import com.giiso.submmited.utils.gson.AppOperator;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.HttpException;
-import retrofit2.Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -120,7 +113,6 @@ public abstract class BaseRecyclerViewFragment<T> extends BaseFragment implement
                 log("HttpResponseHandler:onFailure responseString:" + msg);
                 onRequestFailure();
                 onRequestFinish();
-
             }
         };
         boolean isNeedEmptyView = isNeedEmptyView();

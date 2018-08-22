@@ -9,13 +9,11 @@ import com.giiso.submmited.R;
 import com.giiso.submmited.base.Constants;
 import com.giiso.submmited.bean.Submmited;
 import com.giiso.submmited.bean.base.PageBean;
-import com.giiso.submmited.http.retrofit.RetrofitServiceManager;
 import com.giiso.submmited.http.rxbus.RxBus;
 import com.giiso.submmited.http.rxbus.RxBusMessage;
-import com.giiso.submmited.ui.api.SubmmitedApi;
+import com.giiso.submmited.ui.DetailActivity;
 import com.giiso.submmited.ui.base.adapter.BaseRecyclerAdapter;
 import com.giiso.submmited.ui.base.fragment.BaseGeneralRecyclerFragment;
-import com.giiso.submmited.ui.fragment.DetailInfoDialog;
 import com.giiso.submmited.ui.fragment.adapter.TaskAdapter;
 import com.giiso.submmited.ui.fragment.presenter.TaskItemPresenter;
 import com.giiso.submmited.ui.fragment.presenter.TaskItemView;
@@ -74,7 +72,7 @@ public class TaskFragment extends BaseGeneralRecyclerFragment<Submmited> impleme
     @Override
     public void onItemClick(int position, long itemId) {
         super.onItemClick(position, itemId);
-        DetailInfoDialog.showDetail(mContext, submmitedList.get(position));
+        DetailActivity.show(mContext, submmitedList.get(position).getId(), true);
     }
 
     @Override
@@ -136,12 +134,17 @@ public class TaskFragment extends BaseGeneralRecyclerFragment<Submmited> impleme
     }
 
     @Override
-    public void onConfirm(int id) {
-        mPresenter.confirm(id);
+    public void onSuccess() {
+        requestData();
     }
 
     @Override
-    public void onSuccess() {
-        requestData();
+    public void showLoading() {
+        super.showLoading();
+    }
+
+    @Override
+    public void closeLoading() {
+        super.closeLoading();
     }
 }

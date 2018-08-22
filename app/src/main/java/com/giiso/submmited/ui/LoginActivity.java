@@ -12,13 +12,10 @@ import android.widget.ScrollView;
 import com.giiso.submmited.R;
 import com.giiso.submmited.base.BaseApplication;
 import com.giiso.submmited.base.Constants;
-import com.giiso.submmited.http.rxbus.RxBusMessage;
-import com.giiso.submmited.http.rxbus.RxBus;
 import com.giiso.submmited.ui.base.activity.BaseActivity;
 import com.giiso.submmited.ui.presenter.LoginPresenter;
 import com.giiso.submmited.ui.presenter.LoginView;
 import com.giiso.submmited.utils.ActivityUtil;
-import com.giiso.submmited.utils.DialogUtil;
 import com.giiso.submmited.utils.ToastUtil;
 
 import butterknife.BindView;
@@ -39,7 +36,9 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     ScrollView mLoginFormView;
 
     public static void show(Context context) {
-        context.startActivity(new Intent(context, LoginActivity.class));
+        Intent intent = new Intent(context, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     @Override
@@ -135,15 +134,13 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     public void showLoading() {
         super.showLoading();
-        DialogUtil.showProgressDialog(this);
-        progressDialog = ProgressDialog.show(this, "", "正在登陆中...", false, true);
+        showDialog();
     }
 
     @Override
     public void closeLoading() {
-
         super.closeLoading();
-        progressDialog.dismiss();
+
     }
 
     @Override

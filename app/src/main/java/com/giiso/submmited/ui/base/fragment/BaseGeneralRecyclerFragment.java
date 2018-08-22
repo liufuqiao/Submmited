@@ -1,6 +1,5 @@
 package com.giiso.submmited.ui.base.fragment;
 
-import com.giiso.submmited.http.presenter.BaseObserver;
 import com.giiso.submmited.interf.OnTabReselectListener;
 
 /**

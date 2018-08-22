@@ -7,6 +7,7 @@ package com.giiso.submmited.http.rxbus;
 public class RxBusMessage {
     public static final String MENU = "menu";
     public static final String TASK_LIST_REFRESH = "task_list_refresh";
+    public static final String SUBMMITED_REFRESH = "submmited_refresh";
 
     private String message;
     private int type;

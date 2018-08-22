@@ -3,10 +3,7 @@ package com.giiso.submmited.ui.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.giiso.submmited.R;
 import com.giiso.submmited.base.BaseApplication;
@@ -37,6 +34,7 @@ public class MyFragment extends BaseFragment {;
     public void onClick(View view){
 //        BaseApplication.set(Constants.USERNAME, null);
 //        BaseApplication.set(Constants.PASSWORD, null);
+        BaseApplication.set(Constants.COOKIE, null);
         LoginActivity.show(mContext);
         ((Activity)mContext).finish();
     }

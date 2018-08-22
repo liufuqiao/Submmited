@@ -1,10 +1,9 @@
 package com.giiso.submmited.http.retrofit;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
-import io.reactivex.ObservableTransformer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
+
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Create by Arthur
@@ -13,31 +12,16 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class SchedulersCompat {
 
-    /**
-     * 跟compose()配合使用,比如ObservableUtils.wrap(obj).compose(toMain())
-     * @param <T>
-     * @return
-     */
-    public static <T> ObservableTransformer<T, T> toMain() {
+    private final static Observable.Transformer ioTransformer = new Observable.Transformer() {
+        @Override
+        public Object call(Object o) {
+            return ((Observable) o).subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread());
+        }
+    };
 
-        return new ObservableTransformer<T, T>() {
-            @Override
-            public ObservableSource<T> apply(Observable<T> upstream) {
-                return upstream.subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread());
-            }
-        };
+    public static <T> Observable.Transformer<T, T> applyIoSchedulers() {
+        return (Observable.Transformer<T, T>) ioTransformer;
     }
 
-//    public static <T> FlowableTransformer<T, T> toMain() {
-//
-//        return new FlowableTransformer<T, T>() {
-//
-//            @Override
-//            public Publisher<T> apply(Flowable<T> upstream) {
-//                return upstream.subscribeOn(Schedulers.io())
-//                        .observeOn(AndroidSchedulers.mainThread());
-//            }
-//        };
-//    }
 }

@@ -1,13 +1,10 @@
 package com.giiso.submmited.utils;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.Gravity;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.TextView;
-import com.giiso.submmited.R;
 
 
 /**
@@ -78,33 +75,38 @@ public class DialogUtil {
 		if (context == null) {
 			return ;
 		}
-		progressDialog = new Dialog(context, R.style.progress_dialog);
-		progressDialog.setContentView(R.layout.loading_dialog_layout);
-		progressDialog.setCanceledOnTouchOutside(false);
-		progressDialog.setCancelable(true);
-
-		if(!focusable) {
-			progressDialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-					WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
-		}
-
-		WindowManager.LayoutParams lp = progressDialog.getWindow().getAttributes();
-		if(lp != null) {
-			lp.gravity = gravity;
-		}
-		progressDialog.getWindow().setBackgroundDrawableResource(
-				android.R.color.transparent);
-		TextView msg = (TextView) progressDialog
-				.findViewById(R.id.id_tv_loadingmsg);
 		if(!TextUtils.isEmpty(message)) {
-			msg.setVisibility(View.VISIBLE);
-			msg.setText(message);
-		}else{
-//			msg.setVisibility(View.GONE);
-			msg.setVisibility(View.VISIBLE);
-			msg.setText(context.getString(R.string.add_keyword_load));
+			progressDialog = ProgressDialog.show(context, "", message, false, true);
+		} else {
+			progressDialog = ProgressDialog.show(context, "", "加载中...", false, true);
 		}
-		progressDialog.show();
+//		progressDialog = new Dialog(context, R.style.progress_dialog);
+//		progressDialog.setContentView(R.layout.loading_dialog_layout);
+//		progressDialog.setCanceledOnTouchOutside(false);
+//		progressDialog.setCancelable(true);
+//
+//		if(!focusable) {
+//			progressDialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+//					WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
+//		}
+//
+//		WindowManager.LayoutParams lp = progressDialog.getWindow().getAttributes();
+//		if(lp != null) {
+//			lp.gravity = gravity;
+//		}
+//		progressDialog.getWindow().setBackgroundDrawableResource(
+//				android.R.color.transparent);
+//		TextView msg = (TextView) progressDialog
+//				.findViewById(R.id.id_tv_loadingmsg);
+//		if(!TextUtils.isEmpty(message)) {
+//			msg.setVisibility(View.VISIBLE);
+//			msg.setText(message);
+//		}else{
+////			msg.setVisibility(View.GONE);
+//			msg.setVisibility(View.VISIBLE);
+//			msg.setText(context.getString(R.string.add_keyword_load));
+//		}
+//		progressDialog.show();
 	}
 
 	/**

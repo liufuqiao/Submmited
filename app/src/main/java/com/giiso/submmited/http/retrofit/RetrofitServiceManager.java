@@ -3,7 +3,7 @@ package com.giiso.submmited.http.retrofit;
 import com.giiso.submmited.base.Constants;
 
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -20,7 +20,7 @@ public class RetrofitServiceManager {
         mRetrofit = new Retrofit.Builder()
                 .baseUrl(Constants.REQUEST_URL)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(OkHttpManager.newInstance())
                 .build();
     }

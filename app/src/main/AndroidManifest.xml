@@ -139,7 +139,8 @@
 
         <activity android:name=".ui.LoaderActivity" />
         <activity android:name=".ui.AddTaskActivity" />
-        <activity android:name=".ui.AddSbmmitedActivity"></activity>
+        <activity android:name=".ui.AddSbmmitedActivity"/>
+        <activity android:name=".ui.DetailActivity" />
     </application>
 
 </manifest>

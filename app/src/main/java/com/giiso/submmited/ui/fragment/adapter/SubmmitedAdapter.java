@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.giiso.submmited.R;
 import com.giiso.submmited.bean.Submmited;
+import com.giiso.submmited.ui.DetailActivity;
 import com.giiso.submmited.ui.base.adapter.BaseRecyclerAdapter;
 
 import butterknife.BindView;
@@ -48,7 +49,7 @@ public class SubmmitedAdapter extends BaseRecyclerAdapter<Submmited> {
             @Override
             public void onClick(View v) {
                 if(mOnSubmmitedListener != null){
-                    mOnSubmmitedListener.onUpdate(item.getId());
+                    mOnSubmmitedListener.onUpdate(item);
                 }
             }
         });
@@ -65,9 +66,7 @@ public class SubmmitedAdapter extends BaseRecyclerAdapter<Submmited> {
         submmitedHolder.tvDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mOnSubmmitedListener != null){
-                    mOnSubmmitedListener.onDetail(item.getId());
-                }
+                DetailActivity.show(mContext, item.getId(), false);
             }
         });
     }
@@ -92,7 +91,7 @@ public class SubmmitedAdapter extends BaseRecyclerAdapter<Submmited> {
         @BindView(R.id.tv_details)
         TextView tvDetails;
 
-        public SubmmitedHolder(View itemView) {
+        SubmmitedHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
@@ -100,15 +99,13 @@ public class SubmmitedAdapter extends BaseRecyclerAdapter<Submmited> {
 
     private OnSubmmitListener mOnSubmmitedListener;
 
-    public void setOnTaskListener(OnSubmmitListener mOnSubmmitedListener) {
+    public void setOnSubmmitListener(OnSubmmitListener mOnSubmmitedListener) {
         this.mOnSubmmitedListener = mOnSubmmitedListener;
     }
 
     public interface OnSubmmitListener {
         void onDelete(int id);
 
-        void onDetail(int id);
-
-        void onUpdate(int id);
+        void onUpdate(Submmited submmited);
     }
 }

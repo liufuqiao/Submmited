@@ -44,7 +44,6 @@ public class LoaderActivity extends BaseActivity {
         } else if(item.getId() == 55){
             addFragment(R.id.fl_content, ExceptionFragment.newInstance());
         }
-
     }
 
     @OnClick({R.id.ib_close, R.id.ib_search})

@@ -89,7 +89,7 @@ public abstract class BaseActivity <T extends BasePresenter>  extends AppCompatA
      * 返回Presenter基类
      * @return
      */
-    protected  T getPresenter() {
+    protected T getPresenter() {
         return mPresenter;
     }
 

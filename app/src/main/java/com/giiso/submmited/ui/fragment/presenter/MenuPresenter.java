@@ -1,7 +1,6 @@
 package com.giiso.submmited.ui.fragment.presenter;
 
 import com.giiso.submmited.bean.Menus;
-import com.giiso.submmited.bean.base.PageBean;
 import com.giiso.submmited.http.ResultResponse;
 import com.giiso.submmited.http.presenter.BaseObserver;
 import com.giiso.submmited.http.presenter.BasePresenter;
@@ -24,7 +23,7 @@ public class MenuPresenter<T> extends BasePresenter<MenuView>{
 
     public void getMenuList(){
         mView.showLoading();
-        addDisposable(apiServer.getMenuList(), new BaseObserver<ResultResponse>() {
+        addSubscribe(apiServer.getMenuList(), new BaseObserver<ResultResponse>() {
 
             @Override
             public void onSuccess(ResultResponse response) {

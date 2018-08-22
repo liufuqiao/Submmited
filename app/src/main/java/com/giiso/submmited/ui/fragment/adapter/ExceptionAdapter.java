@@ -81,14 +81,6 @@ public class ExceptionAdapter extends BaseRecyclerAdapter<Submmited> {
                 AddTaskActivity.show(mContext, item.getProjectId(), true);
             }
         });
-        submmitedHolder.tv_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mOnTaskListener != null){
-                    mOnTaskListener.onConfirm(item.getId());
-                }
-            }
-        });
         submmitedHolder.tv_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -190,8 +182,6 @@ public class ExceptionAdapter extends BaseRecyclerAdapter<Submmited> {
         TextView tv_start;
         @BindView(R.id.tv_stop)
         TextView tv_stop;
-        @BindView(R.id.tv_confirm)
-        TextView tv_confirm;
         @BindView(R.id.tv_details)
         TextView tv_details;
 

@@ -102,6 +102,10 @@
     <string name="no_data">暂无数据</string>
     <string name="load_fial">获取失败，点击重新加载</string>
 
+
+    <string name="title_task_detail">任务详情</string>
+    <string name="title_submmited_detail">日报详情</string>
+
     <string name="date">&#8194;&#8194;&#8194;&#8194;日期&#8194;</string>
     <string name="items">项目归属&#8194;</string>
     <string name="task_desc">任务描述&#8194;</string>

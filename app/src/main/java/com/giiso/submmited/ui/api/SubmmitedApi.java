@@ -5,10 +5,8 @@ import com.giiso.submmited.http.ResultResponse;
 
 import java.util.Map;
 
-import io.reactivex.Observable;
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
-import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
@@ -17,10 +15,12 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Streaming;
 import retrofit2.http.Url;
+import rx.Observable;
 
 import static com.giiso.submmited.base.Constants.ADD_SUBMMITED;
 import static com.giiso.submmited.base.Constants.ADD_TASK;
 import static com.giiso.submmited.base.Constants.CONFIRM_TASK;
+import static com.giiso.submmited.base.Constants.DELETE_TASK;
 import static com.giiso.submmited.base.Constants.EMPLOYEE_LIST;
 import static com.giiso.submmited.base.Constants.LOGIN;
 import static com.giiso.submmited.base.Constants.LOGIN_OUT;
@@ -30,9 +30,9 @@ import static com.giiso.submmited.base.Constants.SELECT_ALL_TASK;
 import static com.giiso.submmited.base.Constants.SINGLE_PROJECT_LIST;
 import static com.giiso.submmited.base.Constants.START_BREAK_TASK;
 import static com.giiso.submmited.base.Constants.SUBMMITED_LIST;
+import static com.giiso.submmited.base.Constants.TASK_DETAIL;
 import static com.giiso.submmited.base.Constants.UNUSUSAL_LIST;
 import static com.giiso.submmited.base.Constants.UPDATE_SUBMMITED;
-import static com.giiso.submmited.base.Constants.UPDATE_TASK;
 
 /**
  * Created by LiuRiZhao on 2018/7/25.
@@ -160,6 +160,24 @@ public interface SubmmitedApi {
     @POST(START_BREAK_TASK)
     Observable<ResultResponse> startOrStopTask(@Field(HttpContext.ID) int id,
                                               @Field(HttpContext.STATUS) String status);
+
+    /**
+     * 删除 任务 或 日报
+     * @param id
+     * @return
+     */
+    @FormUrlEncoded
+    @POST(DELETE_TASK)
+    Observable<ResultResponse> deleteTask(@Field(HttpContext.ID) int id);
+
+    /**
+     * 获取任务详情  日报详情
+     * @param id
+     * @return
+     */
+    @FormUrlEncoded
+    @POST(TASK_DETAIL)
+    Observable<ResultResponse> getTaskDetail(@Field(HttpContext.ID) int id);
 
     /**
      * 确认任务

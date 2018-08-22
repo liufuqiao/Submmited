@@ -2,13 +2,9 @@ package com.giiso.submmited.http.presenter;
 
 import android.net.ParseException;
 
-import com.giiso.submmited.BuildConfig;
 import com.giiso.submmited.R;
-import com.giiso.submmited.base.BaseApplication;
 import com.giiso.submmited.base.Constants;
 import com.giiso.submmited.http.ResultResponse;
-import com.giiso.submmited.ui.LoginActivity;
-import com.giiso.submmited.utils.Log;
 import com.giiso.submmited.utils.ToastUtil;
 import com.google.gson.JsonParseException;
 
@@ -18,14 +14,14 @@ import java.io.InterruptedIOException;
 import java.net.ConnectException;
 import java.net.UnknownHostException;
 
-import io.reactivex.observers.DisposableObserver;
 import retrofit2.HttpException;
+import rx.Observer;
 
 /**
  * Created by Administrator on 2018/8/2.
  */
 
-public abstract class BaseObserver<T> extends DisposableObserver<T> {
+public abstract class BaseObserver<T> implements Observer<T> {
     protected BaseView view;
     /**
      * 解析数据失败
@@ -58,10 +54,8 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
     }
 
     @Override
-    protected void onStart() {
-        if (view != null) {
-            view.showLoading();
-        }
+    public void onCompleted() {
+
     }
 
     @Override
@@ -83,6 +77,7 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
 
     @Override
     public void onError(Throwable e) {
+
         if (view != null) {
             view.closeLoading();
         }
@@ -108,7 +103,6 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
                 onError(EXCEPTION_ERROR, "未知错误");
             }
         }
-
     }
 
     private void onException(int unknownError) {
@@ -141,13 +135,6 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
         }
     }
 
-    @Override
-    public void onComplete() {
-        if (view != null) {
-            view.closeLoading();
-        }
-
-    }
     public abstract void onSuccess(T response);
 
     public abstract void onError(int code, String msg);

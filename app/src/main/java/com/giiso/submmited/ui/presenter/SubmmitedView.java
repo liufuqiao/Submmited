@@ -7,5 +7,6 @@ import com.giiso.submmited.http.presenter.BaseView;
  */
 
 public interface SubmmitedView extends BaseView {
-    void onSuccess();
+    void addSubmmitedSuccess();
+    void updateSuccess();
 }

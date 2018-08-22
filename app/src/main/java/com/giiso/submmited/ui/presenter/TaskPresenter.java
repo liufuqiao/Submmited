@@ -2,7 +2,6 @@ package com.giiso.submmited.ui.presenter;
 
 import com.giiso.submmited.bean.EmployeeBean;
 import com.giiso.submmited.bean.ProjectBean;
-import com.giiso.submmited.http.HttpContext;
 import com.giiso.submmited.http.ResultResponse;
 import com.giiso.submmited.http.presenter.BaseObserver;
 import com.giiso.submmited.http.presenter.BasePresenter;
@@ -11,8 +10,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-
-import retrofit2.http.Field;
 
 /**
  * Created by LiuRiZhao on 2018/8/17.
@@ -27,23 +24,23 @@ public class TaskPresenter extends BasePresenter<TaskView> {
     //获取用户个人项目列表
     public void getSingleProjectList() {
         mView.showLoading();
-        addDisposable(apiServer.getSingleProjectList(), new BaseObserver<ResultResponse<ArrayList<ProjectBean>>>() {
-            @Override
-            public void onSuccess(ResultResponse<ArrayList<ProjectBean>> response) {
-                mView.closeLoading();
-                if (response.isSuccess()) {
-                    Type type = new TypeToken<ArrayList<ProjectBean>>() {
-                    }.getType();
-                    String json = AppOperator.getGson().toJson(response.getData());
-                    ArrayList<ProjectBean> projectBeans = AppOperator.getGson().fromJson(json, type);
-                    mView.resultProject(projectBeans);
+        addSubscribe(apiServer.getSingleProjectList(), new BaseObserver<ResultResponse>() {
+                @Override
+                public void onSuccess(ResultResponse response) {
+                    mView.closeLoading();
+                    if (response.isSuccess()) {
+                        Type type = new TypeToken<ArrayList<ProjectBean>>() {
+                        }.getType();
+                        String json = AppOperator.getGson().toJson(response.getData());
+                        ArrayList<ProjectBean> projectBeans = AppOperator.getGson().fromJson(json, type);
+                        mView.resultProject(projectBeans);
+                    }
                 }
-            }
 
-            @Override
-            public void onError(int code, String msg) {
-                mView.closeLoading();
-            }
+                @Override
+                public void onError(int code, String msg) {
+                    mView.closeLoading();
+                }
 
         });
     }
@@ -53,9 +50,9 @@ public class TaskPresenter extends BasePresenter<TaskView> {
      * @param projectId
      */
     public void getEmployeeList(int projectId) {
-        addDisposable(apiServer.getEmployeeList(projectId), new BaseObserver<ResultResponse<ArrayList<EmployeeBean>>>() {
+        addSubscribe(apiServer.getEmployeeList(projectId), new BaseObserver<ResultResponse>() {
             @Override
-            public void onSuccess(ResultResponse<ArrayList<EmployeeBean>> response) {
+            public void onSuccess(ResultResponse response) {
                 if (response.isSuccess()) {
                     Type type = new TypeToken<ArrayList<EmployeeBean>>() {
                     }.getType();
@@ -77,7 +74,7 @@ public class TaskPresenter extends BasePresenter<TaskView> {
      */
     public void addTask(String expectStartTime, String expectFinishTime, int projectId, String name, String type, int userId, String taskTime, String percentComplete) {
         mView.showLoading();
-        addDisposable(apiServer.addTask(expectStartTime, expectFinishTime, projectId, name,
+        addSubscribe(apiServer.addTask(expectStartTime, expectFinishTime, projectId, name,
                 type, userId, taskTime, percentComplete), new BaseObserver<ResultResponse>() {
             @Override
             public void onSuccess(ResultResponse response) {
@@ -99,7 +96,7 @@ public class TaskPresenter extends BasePresenter<TaskView> {
      */
     public void updateTask( int id, String name, String type, String expectStartTime, String expectFinishTime, int projectId, String percentComplete) {
         mView.showLoading();
-        addDisposable(apiServer.updateTask(id, name, type, expectStartTime, expectFinishTime, projectId, percentComplete), new BaseObserver<ResultResponse>() {
+        addSubscribe(apiServer.updateTask(id, name, type, expectStartTime, expectFinishTime, projectId, percentComplete), new BaseObserver<ResultResponse>() {
             @Override
             public void onSuccess(ResultResponse response) {
                 mView.closeLoading();

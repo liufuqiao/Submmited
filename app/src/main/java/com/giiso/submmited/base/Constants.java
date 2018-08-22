@@ -49,7 +49,7 @@ public class Constants {
     public static final String ADD_SUBMMITED = "/tms/employee/add_task";
     //修改日报
     public static final String UPDATE_SUBMMITED = "/tms/employee/update_task";
-    //删除任务
+    //删除任务 日报
     public static final String DELETE_TASK = "/tms/employee/del_task";
     //获取指派人列表
     public static final String EMPLOYEE_LIST = "/tms/employee/employee_list";
@@ -57,6 +57,8 @@ public class Constants {
     public static final String SUBMMITED_LIST = "/tms/employee/select_task_list";
     //异常任务列表
     public static final String UNUSUSAL_LIST = "/tms/employee/select_unususal_task";
+    //获取任务详情or获取日报详情
+    public static final String TASK_DETAIL = "/tms/employee/task_detail";
 
     public static final String REGISTER = "/ac/reg/by_mobile";
 

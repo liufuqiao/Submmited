@@ -8,17 +8,21 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.giiso.submmited.R;
 import com.giiso.submmited.bean.Submmited;
+import com.giiso.submmited.http.rxbus.RxBus;
+import com.giiso.submmited.http.rxbus.RxBusMessage;
 import com.giiso.submmited.ui.adapter.SpinnerAdapter;
 import com.giiso.submmited.ui.adapter.SpinnerBean;
 import com.giiso.submmited.ui.base.activity.BaseActivity;
 import com.giiso.submmited.ui.presenter.SubmmitedPresenter;
 import com.giiso.submmited.ui.presenter.SubmmitedView;
 import com.giiso.submmited.utils.StringUtils;
+import com.giiso.submmited.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -48,6 +52,10 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
     EditText etCompleteProgress;
     @BindView(R.id.et_remark)
     EditText etRemark;
+    @BindView(R.id.ll_task_status)
+    LinearLayout ll_task_status;
+    @BindView(R.id.ll_task_type)
+    LinearLayout ll_task_type;
 
     private Submmited submmited;
     private String status;
@@ -82,6 +90,8 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
             mTvTitle.setText("写日报");
         } else {
             mTvTitle.setText("修改日报");
+            ll_task_status.setVisibility(View.GONE);
+            ll_task_type.setVisibility(View.GONE);
         }
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +114,9 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
             et_task_affiliation.setText(submmited.getProjectName());
             etTask.setText(submmited.getName());
             etTaskType.setText(submmited.getComment_status());
-            //spinnerStatus.
+            etHours.setText(submmited.getTaskTime());
+            etCompleteProgress.setText(submmited.getPercentComplete());
+            etRemark.setText(submmited.getDescription());
         }
     }
 
@@ -151,7 +163,11 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
                 String hours = etHours.getText().toString().trim();
                 String progress = etCompleteProgress.getText().toString().trim();
                 String remark = etRemark.getText().toString().trim();
-                mPresenter.addSubmmited(id, date, hours, status, progress, remark);
+                if(isUpdate){
+                    mPresenter.updateSubmmited(id, progress, hours, remark, date);
+                } else {
+                    mPresenter.addSubmmited(id, date, hours, status, progress, remark);
+                }
                 break;
             case R.id.ed_date:
                 new DatePickerDialog(AddSbmmitedActivity.this, onDateSetListener, mYear, mMonth, mDay).show();
@@ -170,12 +186,6 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
         }
     };
 
-
-    @Override
-    public void onSuccess() {
-        finish();
-    }
-
     @Override
     public void showLoading() {
         super.showLoading();
@@ -186,5 +196,17 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
     public void closeLoading() {
         super.closeLoading();
         dismissDialog();
+    }
+
+    @Override
+    public void addSubmmitedSuccess() {
+        ToastUtil.showToast("添加日报成功");
+        finish();
+    }
+
+    @Override
+    public void updateSuccess() {
+        RxBus.getInstance().send(new RxBusMessage(0, RxBusMessage.SUBMMITED_REFRESH));
+        finish();
     }
 }

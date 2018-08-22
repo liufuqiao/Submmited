@@ -55,10 +55,28 @@ public class Submmited implements Serializable {
     private String projectName;
     private int projectId;
     private String isDel;
+    private String typeName;
     private String createName;
     private int status;
     private String taskTime;
     private String realFinishTime;
+    private String createTime;
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
 
     public String getExpectStartTime() {
         return expectStartTime;

@@ -7,5 +7,5 @@ import com.giiso.submmited.http.presenter.BaseView;
  */
 
 public interface SubmmitedView extends BaseView {
-
+    void deleteSuccess();
 }

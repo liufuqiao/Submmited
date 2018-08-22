@@ -1,16 +1,13 @@
 package com.giiso.submmited.http.presenter;
 
+import com.giiso.submmited.http.ResultResponse;
 import com.giiso.submmited.http.retrofit.RetrofitServiceManager;
 import com.giiso.submmited.http.retrofit.SchedulersCompat;
 import com.giiso.submmited.ui.api.SubmmitedApi;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
-import io.reactivex.ObservableTransformer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
+import rx.Observable;
+import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by LiuRiZhao on 2017/11/30.
@@ -19,8 +16,8 @@ import io.reactivex.schedulers.Schedulers;
 public class BasePresenter<T extends BaseView>
 {
     protected T mView;
-    //使用了CompositeDisposable来进行避免内存的泄漏
-    private CompositeDisposable mCompositeDisposable;
+    //使用了CompositeSubscription来进行避免内存的泄漏
+    private CompositeSubscription mCompositeSubscription;
 
     protected SubmmitedApi apiServer = RetrofitServiceManager.getInstance().create(SubmmitedApi.class);
 
@@ -29,16 +26,17 @@ public class BasePresenter<T extends BaseView>
     }
 
     private void unSubscribe() {
-        if (mCompositeDisposable != null) {
-            mCompositeDisposable.dispose();
+        if (mCompositeSubscription != null) {
+            mCompositeSubscription.unsubscribe();
         }
     }
 
-    protected void addDisposable(Observable<?> observable, BaseObserver observer) {
-        if (mCompositeDisposable == null) {
-            mCompositeDisposable = new CompositeDisposable();
+    protected void addSubscribe(Observable<ResultResponse> observable, BaseObserver observer) {
+        if (mCompositeSubscription == null) {
+            mCompositeSubscription = new CompositeSubscription();
         }
-        mCompositeDisposable.add(observable.wrap(observable).compose(SchedulersCompat.toMain()).subscribeWith(observer));
+        Subscription subscription = observable.compose(SchedulersCompat.<ResultResponse>applyIoSchedulers()).subscribe(observer);
+        mCompositeSubscription.add(subscription);
     }
 
     public void detachView()

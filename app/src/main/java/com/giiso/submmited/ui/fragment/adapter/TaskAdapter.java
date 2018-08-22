@@ -12,8 +12,8 @@ import com.giiso.submmited.R;
 import com.giiso.submmited.bean.Submmited;
 import com.giiso.submmited.ui.AddSbmmitedActivity;
 import com.giiso.submmited.ui.AddTaskActivity;
+import com.giiso.submmited.ui.DetailActivity;
 import com.giiso.submmited.ui.base.adapter.BaseRecyclerAdapter;
-import com.giiso.submmited.ui.fragment.DetailInfoDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -62,7 +62,7 @@ public class TaskAdapter extends BaseRecyclerAdapter<Submmited> {
         submmitedHolder.tv_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DetailInfoDialog.showDetail(mContext, item);
+                DetailActivity.show(mContext, item.getId(), true);
             }
         });
         submmitedHolder.tv_submmited.setOnClickListener(new View.OnClickListener() {
@@ -75,14 +75,6 @@ public class TaskAdapter extends BaseRecyclerAdapter<Submmited> {
             @Override
             public void onClick(View v) {
                 AddTaskActivity.show(mContext, item.getProjectId(), true);
-            }
-        });
-        submmitedHolder.tv_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mOnTaskListener != null){
-                    mOnTaskListener.onConfirm(item.getId());
-                }
             }
         });
         submmitedHolder.tv_stop.setOnClickListener(new View.OnClickListener() {
@@ -127,8 +119,6 @@ public class TaskAdapter extends BaseRecyclerAdapter<Submmited> {
         TextView tv_start;
         @BindView(R.id.tv_stop)
         TextView tv_stop;
-        @BindView(R.id.tv_confirm)
-        TextView tv_confirm;
         @BindView(R.id.tv_details)
         TextView tv_details;
 
@@ -147,6 +137,5 @@ public class TaskAdapter extends BaseRecyclerAdapter<Submmited> {
     public interface OnTaskListener{
         void onTaskStop(int id);
         void onTaskStart(int id);
-        void onConfirm(int id);
     }
 }
