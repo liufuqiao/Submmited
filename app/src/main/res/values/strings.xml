@@ -114,6 +114,7 @@
     <string name="task_status">任务状态&#8194;</string>
     <string name="task_progress">任务进度&#8194;</string>
     <string name="task_predict_hour">预计工时&#8194;</string>
+    <string name="task_practical_time">实际工时&#8194;</string>
     <string name="task_man_hours">工时小时&#8194;</string>
     <string name="task_type">任务类型&#8194;</string>
     <string name="task_complete_progress">完成进度&#8194;</string>

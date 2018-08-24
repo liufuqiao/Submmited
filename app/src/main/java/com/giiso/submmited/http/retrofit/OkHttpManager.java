@@ -2,15 +2,13 @@ package com.giiso.submmited.http.retrofit;
 
 
 import com.giiso.submmited.BuildConfig;
+import com.giiso.submmited.base.BaseApplication;
+import com.giiso.submmited.http.cookie.CookieManger;
 import com.giiso.submmited.utils.Log;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
@@ -41,6 +39,7 @@ public class OkHttpManager {
                     builder.addInterceptor(new LoggingInterceptor());
                     builder.addInterceptor(new HeaderInterceptor());
                     builder.addInterceptor(new ReceivedCookiesInterceptor());
+                    builder.cookieJar(new CookieManger(BaseApplication.getInstance()));
                     //超时时间
                     builder.connectTimeout(15, TimeUnit.SECONDS);//15S连接超时
                     builder.readTimeout(15, TimeUnit.SECONDS);//20s读取超时

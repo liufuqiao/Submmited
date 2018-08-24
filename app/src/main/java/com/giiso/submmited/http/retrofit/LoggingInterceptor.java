@@ -4,7 +4,6 @@ import com.giiso.submmited.base.BaseApplication;
 import com.giiso.submmited.bean.http.HttpLog;
 import com.giiso.submmited.db.HttpLogDao;
 import com.giiso.submmited.ui.LoginActivity;
-import com.giiso.submmited.utils.Log;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -25,7 +24,6 @@ public class LoggingInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) {
         Request request = chain.request();
-
         HttpLog requestLog = new HttpLog();
         requestLog.setType(request.method());
         requestLog.setHead(request.headers().toString());

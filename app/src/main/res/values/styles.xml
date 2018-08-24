@@ -24,7 +24,7 @@
     </style>
 
     <style name="StartTheme" parent="AppTheme">
-        <item name="android:windowBackground">@mipmap/background</item>
+        <!--<item name="android:windowBackground">@mipmap/icon_background</item>-->
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowIsTranslucent">true</item>

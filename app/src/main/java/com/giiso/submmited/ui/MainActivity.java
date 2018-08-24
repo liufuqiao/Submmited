@@ -1,6 +1,7 @@
 package com.giiso.submmited.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -9,17 +10,16 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.giiso.submmited.R;
-import com.giiso.submmited.http.rxbus.RxBus;
 import com.giiso.submmited.ui.base.activity.BaseActivity;
+import com.giiso.submmited.ui.fragment.HomeFragment;
 import com.giiso.submmited.ui.fragment.ItemsFragment;
 import com.giiso.submmited.ui.fragment.MemberFragment;
 import com.giiso.submmited.ui.fragment.MyFragment;
-import com.giiso.submmited.ui.fragment.SubmmitedFragment;
+import com.giiso.submmited.utils.ActivityUtil;
 import com.giiso.submmited.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import io.reactivex.functions.Consumer;
 
 public class MainActivity extends BaseActivity{
 
@@ -37,14 +37,14 @@ public class MainActivity extends BaseActivity{
     private FragmentManager mFragmentManager;
     private FragmentTransaction mTransaction;
 
-    private SubmmitedFragment mSubmmitedFragment;
+    private HomeFragment mSubmmitedFragment;
     private ItemsFragment mItemsFragment;
     private MemberFragment mMemberFragment;
     private MyFragment mMyFragment;
 
-    public static void show(Activity activity) {
-        activity.startActivity(new Intent(activity, MainActivity.class));
-        activity.finish();
+    public static void show(Context context) {
+        context.startActivity(new Intent(context, MainActivity.class));
+        ((Activity)context).finish();
     }
 
     @Override
@@ -62,7 +62,7 @@ public class MainActivity extends BaseActivity{
         mTransaction = mFragmentManager.beginTransaction();
         //初始化默展示
         rlFirstLayout.setSelected(true);
-        mSubmmitedFragment = SubmmitedFragment.newInstance();
+        mSubmmitedFragment = HomeFragment.newInstance();
         mTransaction.replace(R.id.fl_content, mSubmmitedFragment);
         mTransaction.commit();
 
@@ -77,7 +77,7 @@ public class MainActivity extends BaseActivity{
             case R.id.rl_first_layout:
                 rlFirstLayout.setSelected(true);
                 if(mSubmmitedFragment == null){
-                    mSubmmitedFragment = SubmmitedFragment.newInstance();
+                    mSubmmitedFragment = HomeFragment.newInstance();
                     mTransaction.add(R.id.fl_content, mSubmmitedFragment);
                 } else {
                     mTransaction.show(mSubmmitedFragment);
@@ -145,7 +145,7 @@ public class MainActivity extends BaseActivity{
             ToastUtil.showToast(R.string.tip_double_click_exit);
             firstTime = currentTimeMillis;
         } else {
-            finish();
+            ActivityUtil.getInstance().AppExit(this);
         }
     }
 

@@ -109,7 +109,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
             // form field with an error.
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
+            // Show a progress spinner, and kick off a icon_background task to
             // perform the user anonymousLogins attempt.
             mPresenter.login(userName, password);
         }

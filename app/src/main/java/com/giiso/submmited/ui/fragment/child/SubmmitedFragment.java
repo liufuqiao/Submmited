@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.giiso.submmited.R;
 import com.giiso.submmited.base.Constants;
 import com.giiso.submmited.bean.Submmited;
 import com.giiso.submmited.bean.base.PageBean;
@@ -16,7 +15,6 @@ import com.giiso.submmited.ui.base.fragment.BaseGeneralRecyclerFragment;
 import com.giiso.submmited.ui.fragment.adapter.SubmmitedAdapter;
 import com.giiso.submmited.ui.fragment.presenter.SubmmitedPresenter;
 import com.giiso.submmited.ui.fragment.presenter.SubmmitedView;
-import com.giiso.submmited.ui.widget.DividerItemDecoration;
 import com.giiso.submmited.utils.DialogUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -67,7 +65,7 @@ public class SubmmitedFragment extends BaseGeneralRecyclerFragment<Submmited> im
             }
         });
         mPersenter = new SubmmitedPresenter(this);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST, R.drawable.shape_list_divider_4dp));
+       // mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST, R.drawable.shape_list_divider_4dp));
     }
 
     @Override

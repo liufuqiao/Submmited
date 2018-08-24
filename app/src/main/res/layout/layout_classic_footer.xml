@@ -18,18 +18,26 @@
         <!--android:layout_marginRight="8dp"-->
         <!--android:layout_toLeftOf="@+id/tvLoadMore" />-->
 
-        <ImageView
-            android:id="@+id/ivSuccess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <!--<ImageView-->
+            <!--android:id="@+id/ivSuccess"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_toLeftOf="@+id/tvLoadMore"/>-->
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/tvLoadMore"
+            android:layout_marginRight="@dimen/space10"
             android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"
-            android:layout_toLeftOf="@+id/tvLoadMore"/>
-        <!--android:background="@drawable/qq_refresh_success" />-->
+            android:layout_toStartOf="@+id/tvLoadMore" />
+        <!--andricon_backgroundound="@drawable/qq_refresh_success" />-->
 
         <TextView
             android:id="@+id/tvLoadMore"
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"

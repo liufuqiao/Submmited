@@ -1,7 +1,6 @@
 package com.giiso.submmited.ui.widget.swipetoloadlayout;
 
 import android.content.Context;
-import android.graphics.Matrix;
 import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -41,13 +40,13 @@ public class ClassicLoadMoreFooterView extends SwipeLoadMoreFooterLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
         tvLoadMore = (TextView) findViewById(R.id.tvLoadMore);
-        ivSuccess = (ImageView) findViewById(R.id.ivSuccess);
+//        ivSuccess = (ImageView) findViewById(R.id.ivSuccess);
 //        progressBar = (ProgressBar) findViewById(R.id.progressbar);
         tvRefreshNoMore = (TextView) findViewById(R.id.tvRefreshNoMore);
         rlRefresh = (RelativeLayout) findViewById(R.id.rlRefresh);
-        rotate = (AnimationDrawable) getResources().getDrawable(
-                R.drawable.refresh_animation_list);
-        ivSuccess.setImageDrawable(rotate);
+//        rotate = (AnimationDrawable) getResources().getDrawable(
+//                R.drawable.refresh_animation_list);
+//        ivSuccess.setImageDrawable(rotate);
     }
 
     public void start() {
@@ -74,10 +73,10 @@ public class ClassicLoadMoreFooterView extends SwipeLoadMoreFooterLayout {
 //            ivSuccess.setVisibility(GONE);
 //            progressBar.setVisibility(GONE);
             stop();
-            Matrix matrix = new Matrix();
-            ivSuccess.setScaleType(ImageView.ScaleType.MATRIX);   //required
-            matrix.postRotate((float) -y * 2, ivSuccess.getWidth() / 2, ivSuccess.getHeight() / 2);
-            ivSuccess.setImageMatrix(matrix);
+            //Matrix matrix = new Matrix();
+            //ivSuccess.setScaleType(ImageView.ScaleType.MATRIX);   //required
+            //matrix.postRotate((float) -y * 2, ivSuccess.getWidth() / 2, ivSuccess.getHeight() / 2);
+            //ivSuccess.setImageMatrix(matrix);
             if (!noMore) {
                 rlRefresh.setVisibility(VISIBLE);
                 tvRefreshNoMore.setVisibility(GONE);

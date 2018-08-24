@@ -67,7 +67,7 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * <p>This cache limits the number of bytes that it will store on the
  * filesystem. When the number of stored bytes exceeds the limit, the cache will
- * remove entries in the background until the limit is satisfied. The limit is
+ * remove entries in the icon_background until the limit is satisfied. The limit is
  * not strict: the cache may temporarily exceed it while waiting for files to be
  * deleted. The limit does not include filesystem overhead or the cache
  * journal so space-sensitive applications should set a conservative limit.
@@ -267,7 +267,7 @@ public final class DiskLruCache implements Closeable {
     }
 
     /**
-     * This cache uses a single background thread to evict entries.
+     * This cache uses a single icon_background thread to evict entries.
      */
     private final ExecutorService executorService = new ThreadPoolExecutor(0, 1,
             60L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
@@ -558,7 +558,7 @@ public final class DiskLruCache implements Closeable {
 
     /**
      * Returns the number of bytes currently being used to store the values in
-     * this cache. This may be greater than the max size if a background
+     * this cache. This may be greater than the max size if a icon_background
      * deletion is pending.
      */
     public synchronized long size() {

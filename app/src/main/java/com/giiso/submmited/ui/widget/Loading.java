@@ -180,7 +180,7 @@ public class Loading extends View {
     }
 
     /**
-     * Get the background line size
+     * Get the icon_background line size
      *
      * @return the size unit is px
      */
@@ -198,7 +198,7 @@ public class Loading extends View {
     }
 
     /**
-     * Set the background color, eg: "#0xffffff"
+     * Set the icon_background color, eg: "#0xffffff"
      * else you @see {@link #setBackgroundColorRes(int)}
      *
      * @param color color value
@@ -209,7 +209,7 @@ public class Loading extends View {
     }
 
     /**
-     * Set the background color by resource id
+     * Set the icon_background color by resource id
      *
      * @param colorRes Color resource id
      */
@@ -222,7 +222,7 @@ public class Loading extends View {
     }
 
     /**
-     * Get background color value
+     * Get icon_background color value
      *
      * @return Color
      */

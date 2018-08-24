@@ -114,9 +114,11 @@ public class AddSbmmitedActivity extends BaseActivity<SubmmitedPresenter> implem
             et_task_affiliation.setText(submmited.getProjectName());
             etTask.setText(submmited.getName());
             etTaskType.setText(submmited.getComment_status());
-            etHours.setText(submmited.getTaskTime());
-            etCompleteProgress.setText(submmited.getPercentComplete());
-            etRemark.setText(submmited.getDescription());
+            if(isUpdate){
+                etHours.setText(submmited.getTaskTime());
+                etCompleteProgress.setText(submmited.getPercentComplete());
+                etRemark.setText(submmited.getDescription());
+            }
         }
     }
 

@@ -1,7 +1,6 @@
 package com.giiso.submmited.ui.widget.swipetoloadlayout;
 
 import android.content.Context;
-import android.graphics.Matrix;
 import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -57,8 +56,8 @@ public class TwitterRefreshHeaderView extends SwipeRefreshHeaderLayout {
 
         tvRefresh = (TextView) findViewById(R.id.tvRefresh);
 //        ivArrow = (ImageView) findViewById(R.id.ivArrow);
-        ivSuccess = (ImageView) findViewById(R.id.ivSuccess);
-        ivSuccess.setImageDrawable(rotate);
+//        ivSuccess = (ImageView) findViewById(R.id.ivSuccess);
+//        ivSuccess.setImageDrawable(rotate);
 //        progressBar = (ProgressBar) findViewById(R.id.progressbar);
 //        ivArrow.setImageDrawable(rotate);
     }
@@ -96,10 +95,10 @@ public class TwitterRefreshHeaderView extends SwipeRefreshHeaderLayout {
 //            ivArrow.setVisibility(VISIBLE);
 //            progressBar.setVisibility(GONE);
 //            ivSuccess.setVisibility(GONE);
-            Matrix matrix = new Matrix();
-            ivSuccess.setScaleType(ImageView.ScaleType.MATRIX);   //required
-            matrix.postRotate((float) y * 2, ivSuccess.getWidth() / 2, ivSuccess.getHeight() / 2);
-            ivSuccess.setImageMatrix(matrix);
+            //Matrix matrix = new Matrix();
+            //ivSuccess.setScaleType(ImageView.ScaleType.MATRIX);   //required
+            //matrix.postRotate((float) y * 2, ivSuccess.getWidth() / 2, ivSuccess.getHeight() / 2);
+            //ivSuccess.setImageMatrix(matrix);
 
             if (y > mHeaderHeight) {
                 tvRefresh.setText(R.string.release_to_refresh);
